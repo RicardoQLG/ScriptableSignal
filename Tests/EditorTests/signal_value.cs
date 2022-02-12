@@ -26,6 +26,6 @@ public class signal_value
     public void signal_value_should_be_able_to_set_OnUpdateValue()
     {
         sut.OnUpdateValue = signalEventStub;
-        Assert.AreSame(sut.OnUpdateValue, signalEventStub);
+        Assert.AreSame(signalEventStub, sut.OnUpdateValue);
     }
 }
