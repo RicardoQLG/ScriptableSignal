@@ -1,3 +1,4 @@
+using NSubstitute;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -10,5 +11,14 @@ public class signal_variable
     {
         SutImplementation sut = ScriptableObject.CreateInstance<SutImplementation>();
         Assert.IsInstanceOf(typeof(ISignalEvent<float>), sut.OnUpdateValue);
+    }
+
+    [Test]
+    public void signal_variable_should_be_able_to_set_OnUpdateValue()
+    {
+        SutImplementation sut = ScriptableObject.CreateInstance<SutImplementation>();
+        ISignalEvent<float> signalEvent = Substitute.For<ISignalEvent<float>>();
+        sut.OnUpdateValue = signalEvent;
+        Assert.AreSame(sut.OnUpdateValue, signalEvent);
     }
 }
