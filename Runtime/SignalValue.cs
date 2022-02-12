@@ -12,4 +12,6 @@ public class SignalValue<T> : ScriptableObject
         }
         set { m_OnUpdateValue = value; }
     }
+
+    public T Value;
 }
