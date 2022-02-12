@@ -6,19 +6,26 @@ class SutImplementation : SignalValue<float> {}
 
 public class signal_value
 {
+    private SutImplementation sut;
+    private ISignalEvent<float> signalEventStub;
+
+    [SetUp]
+    public void SetUp ()
+    {
+        sut = ScriptableObject.CreateInstance<SutImplementation>();
+        signalEventStub = Substitute.For<ISignalEvent<float>>();
+    }
+
     [Test]
     public void signal_value_should_instantiate_SignalEvent_if_not_provided()
     {
-        SutImplementation sut = ScriptableObject.CreateInstance<SutImplementation>();
         Assert.IsInstanceOf(typeof(ISignalEvent<float>), sut.OnUpdateValue);
     }
 
     [Test]
     public void signal_value_should_be_able_to_set_OnUpdateValue()
     {
-        SutImplementation sut = ScriptableObject.CreateInstance<SutImplementation>();
-        ISignalEvent<float> signalEvent = Substitute.For<ISignalEvent<float>>();
-        sut.OnUpdateValue = signalEvent;
-        Assert.AreSame(sut.OnUpdateValue, signalEvent);
+        sut.OnUpdateValue = signalEventStub;
+        Assert.AreSame(sut.OnUpdateValue, signalEventStub);
     }
 }
