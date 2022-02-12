@@ -1,0 +1,11 @@
+{
+    "name": "com.ricardogodoy.scriptablesignal",
+    "version": "1.0.0",
+    "description": "",
+    "displayName": "ScriptableSignal",
+    "unity": "2020.3",
+    "author": "Ricardo Godoy",
+    "hideInEditor": true,
+    "keywords": ["events", "variables", "scriptable"]
+  }
+  
