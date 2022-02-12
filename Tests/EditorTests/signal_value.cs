@@ -35,4 +35,12 @@ public class signal_value
         sut.Value = 7f;
         Assert.AreEqual(7f, sut.Value);
     }
+
+    [Test]
+    public void signal_value_should_call_Invoke_with_value()
+    {
+        sut.OnUpdateValue = signalEventStub;
+        sut.Value = 15f;
+        signalEventStub.Received().Invoke(15f);
+    }
 }
