@@ -13,5 +13,14 @@ public class SignalValue<T> : ScriptableObject
         set { m_OnUpdateValue = value; }
     }
 
-    public T Value;
+    private T m_Value;
+    public T Value
+    {
+        get { return m_Value; }
+        set
+        {
+            m_Value = value;
+            OnUpdateValue.Invoke(value);
+        }
+    }
 }
