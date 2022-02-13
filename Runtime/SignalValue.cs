@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SignalValue<T> : ScriptableObject
 {
-    public ISignalEvent<T> m_OnUpdateValue;
+    private ISignalEvent<T> m_OnUpdateValue;
     public ISignalEvent<T> OnUpdateValue
     {
         get
