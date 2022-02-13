@@ -1,5 +1,7 @@
 using UnityEngine;
+using System;
 
+[Serializable]
 public class SignalValue<T> : ScriptableObject, ISignalValue<T>
 {
     [HideInInspector] [SerializeField] private ISignalEvent<T> m_OnUpdateValue;
