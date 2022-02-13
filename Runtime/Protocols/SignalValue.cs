@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SignalValue<T> : ScriptableObject
+public class SignalValue<T> : ScriptableObject, ISignalValue<T>
 {
     [HideInInspector] [SerializeField] private ISignalEvent<T> m_OnUpdateValue;
     public ISignalEvent<T> OnUpdateValue
