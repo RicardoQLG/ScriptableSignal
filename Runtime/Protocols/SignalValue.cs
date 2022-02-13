@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SignalValue<T> : ScriptableObject
 {
-    private ISignalEvent<T> m_OnUpdateValue;
+    [HideInInspector] [SerializeField] private ISignalEvent<T> m_OnUpdateValue;
     public ISignalEvent<T> OnUpdateValue
     {
         get
@@ -13,7 +13,7 @@ public class SignalValue<T> : ScriptableObject
         set { m_OnUpdateValue = value; }
     }
 
-    private T m_Value;
+    [HideInInspector] [SerializeField] private T m_Value;
     public T Value
     {
         get { return m_Value; }
