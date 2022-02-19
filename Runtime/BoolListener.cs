@@ -1,0 +1,1 @@
+public class BoolListener : SignalListener<bool> {}
