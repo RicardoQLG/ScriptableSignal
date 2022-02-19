@@ -1,1 +1,4 @@
-public class IntListener : SignalListener<int> {}
+namespace ScriptableSignal
+{
+    public class IntListener : SignalListener<int> {}
+}

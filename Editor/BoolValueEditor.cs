@@ -1,4 +1,7 @@
 using UnityEditor;
 
-[CustomEditor(typeof(BoolValue))]
-public class BoolValueEditor : SignalValueEditor<bool> {}
+namespace ScriptableSignal
+{
+    [CustomEditor(typeof(BoolValue))]
+    public class BoolValueEditor : SignalValueEditor<bool> {}
+}

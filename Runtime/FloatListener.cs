@@ -1,1 +1,4 @@
-public class FloatListener : SignalListener<float> {}
+namespace ScriptableSignal
+{
+    public class FloatListener : SignalListener<float> {}
+}

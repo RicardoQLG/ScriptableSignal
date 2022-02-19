@@ -1,4 +1,7 @@
 using UnityEditor;
 
-[CustomEditor(typeof(FloatValue))]
-public class FloatValueEditor : SignalValueEditor<float> {}
+namespace ScriptableSignal
+{
+    [CustomEditor(typeof(FloatValue))]
+    public class FloatValueEditor : SignalValueEditor<float> {}
+}

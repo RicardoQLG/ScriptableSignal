@@ -1,9 +1,7 @@
 {
     "name": "Runtime",
-    "rootNamespace": "",
-    "references": [
-        "GUID:89428df5c220dc44b9c6d7e5b5b0170e"
-    ],
+    "rootNamespace": "ScriptableSignal",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

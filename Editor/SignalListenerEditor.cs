@@ -1,3 +1,6 @@
 using UnityEditor;
 
-public class SignalListenerEditor<T> : Editor {}
+namespace ScriptableSignal
+{
+    public class SignalListenerEditor<T> : Editor {}
+}

@@ -1,4 +1,7 @@
 using UnityEditor;
 
-[CustomEditor(typeof(IntListener))]
-public class IntListenerEditor : SignalListenerEditor<int> {}
+namespace ScriptableSignal
+{
+    [CustomEditor(typeof(IntListener))]
+    public class IntListenerEditor : SignalListenerEditor<int> {}
+}

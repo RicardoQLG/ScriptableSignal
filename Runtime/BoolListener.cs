@@ -1,1 +1,4 @@
-public class BoolListener : SignalListener<bool> {}
+namespace ScriptableSignal
+{
+    public class BoolListener : SignalListener<bool> {}
+}

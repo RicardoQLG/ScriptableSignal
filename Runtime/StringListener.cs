@@ -1,1 +1,4 @@
-public class StringListener : SignalListener<string> {}
+namespace ScriptableSignal
+{
+    public class StringListener : SignalListener<string> {}
+}

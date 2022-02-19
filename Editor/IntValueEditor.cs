@@ -1,4 +1,7 @@
 using UnityEditor;
 
-[CustomEditor(typeof(IntValue))]
-public class IntValueEditor : SignalValueEditor<int> {}
+namespace ScriptableSignal
+{
+    [CustomEditor(typeof(IntValue))]
+    public class IntValueEditor : SignalValueEditor<int> {}
+}

@@ -1,3 +1,6 @@
 using UnityEngine;
 
-public class Vector2Listener : SignalListener<Vector2> {}
+namespace ScriptableSignal
+{
+    public class Vector2Listener : SignalListener<Vector2> {}
+}
