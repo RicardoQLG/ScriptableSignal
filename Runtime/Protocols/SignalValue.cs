@@ -1,28 +1,31 @@
 using UnityEngine;
 using System;
 
-[Serializable]
-public class SignalValue<T> : ScriptableObject, ISignalValue<T>
+namespace ScriptableSignal
 {
-    [HideInInspector] [SerializeField] private ISignalEvent<T> m_OnUpdateValue;
-    public ISignalEvent<T> OnUpdateValue
+    [Serializable]
+    public class SignalValue<T> : ScriptableObject, ISignalValue<T>
     {
-        get
+        [HideInInspector] [SerializeField] private ISignalEvent<T> m_OnUpdateValue;
+        public ISignalEvent<T> OnUpdateValue
         {
-            if (m_OnUpdateValue == null) m_OnUpdateValue = new SignalEvent<T>();
-            return m_OnUpdateValue;
+            get
+            {
+                if (m_OnUpdateValue == null) m_OnUpdateValue = new SignalEvent<T>();
+                return m_OnUpdateValue;
+            }
+            set { m_OnUpdateValue = value; }
         }
-        set { m_OnUpdateValue = value; }
-    }
 
-    [HideInInspector] [SerializeField] private T m_Value;
-    public T Value
-    {
-        get { return m_Value; }
-        set
+        [HideInInspector] [SerializeField] private T m_Value;
+        public T Value
         {
-            m_Value = value;
-            OnUpdateValue.Invoke(value);
+            get { return m_Value; }
+            set
+            {
+                m_Value = value;
+                OnUpdateValue.Invoke(value);
+            }
         }
     }
 }

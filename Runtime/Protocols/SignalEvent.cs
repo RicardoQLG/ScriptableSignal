@@ -1,5 +1,8 @@
 using System;
 using UnityEngine.Events;
 
-[Serializable]
-public class SignalEvent<T> : UnityEvent<T>, ISignalEvent<T> {}
+namespace ScriptableSignal
+{
+  [Serializable]
+  public class SignalEvent<T> : UnityEvent<T>, ISignalEvent<T> {}
+}
