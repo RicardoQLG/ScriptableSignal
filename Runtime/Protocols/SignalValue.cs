@@ -24,8 +24,13 @@ namespace ScriptableSignal
             set
             {
                 m_Value = value;
-                OnUpdateValue.Invoke(value);
+                Raise();
             }
+        }
+
+        public void Raise ()
+        {
+            OnUpdateValue.Invoke(m_Value);
         }
     }
 }
